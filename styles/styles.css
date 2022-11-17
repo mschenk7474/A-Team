@@ -1,24 +1,184 @@
 body {
-    margin: 0;
-    width: 960px;
-    margin: 0 auto;
+  margin: 0;
+  margin: 0 auto;
 }
 
 section {
-    display: flex;
-    align-content: flex-start;
+  display: flex;
+  align-content: flex-start;
 }
 
 img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav > ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.pricetag {
+  white-space: nowrap;
+  position: relative;
+  margin: 0 5px 0 10px;
+  display: inline-block;
+  height: 25px;
+  border-radius: 0 5px 5px 0;
+  padding: 0 25px 0 15px;
+  background: #e8edf0;
+  border: 1px solid #c7d2d4;
+  color: #999;
+  line-height: 23px;
+}
+.pricetag:after {
+  position: absolute;
+  right: 0;
+  margin: 1px 7px;
+  font-weight: bold;
+  font-size: 19px;
+  content: "\00D7";
+}
+.pricetag:before {
+  position: absolute;
+  background: #e8edf0;
+  content: "\25CF";
+  color: white;
+  text-shadow: 0 0 1px #aaa;
+  font-size: 12px;
+  line-height: 13px;
+  text-indent: 6px;
+  top: 3px;
+  left: -10px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  border-left: 1px solid #c7d2d4;
+  border-bottom: 1px solid #c7d2d4;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 100px;
+  background-color: orange;
+  font-family: Arial;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  cursor: pointer; /* added for when clicking on categories, still has clicker element*/
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: orange;
+  color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main_img {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.main_img h1 {
+  font-size: 90px;
+  text-decoration: line-through;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+}
+
+.main_img h2 {
+  color: white;
+  font-size: 50px;
+  text-decoration: underline;
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.main_img h1:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.main_img img {
+  width: 100%;
+}
+
+.footer {
+  left: 10px;
+  bottom: 5px;
+  right: 10px;
+  width: 95%;
+  background-color: gray;
+  color: white;
+  text-align: center;
 }

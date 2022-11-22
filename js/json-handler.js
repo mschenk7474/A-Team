@@ -42,7 +42,8 @@ retrieve("data/categories.json").then((categories) => {
   for (var i = 0; i < categories.length; i++) {
     let newTag = document.createElement("span");
     newTag.innerText = categories[i]["name"];
-    newTag.classList.add("pricetag")
+    newTag.classList.add("pricetag");
+    newTag.style = "background-color: " + categories[i].color;
     document.getElementById("tags-display").append(newTag);
   }
 });

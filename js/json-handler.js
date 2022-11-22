@@ -1,15 +1,15 @@
-import { DataHandler } from "./DataHandler.js";
+// import { DataHandler } from "./DataHandler.js";
 
-var dataHandler = new DataHandler();
-dataHandler.init();
+// var dataHandler = new DataHandler();
+// dataHandler.init();
 
-var categories = dataHandler.getCategories();
+// var categories = dataHandler.getCategories();
 
-console.log(categories);
+// console.log(categories);
 
 function displayTags() {}
 
-function filter(data, key, value, isArray = false) {
+function filter(data, key, value) {
   if (value == "") {
     // no value specified by user, no filtering to be done
     return data;
@@ -24,12 +24,31 @@ function filter(data, key, value, isArray = false) {
   return data;
 }
 
-console.log(filter([{ cat: 1 }, { cat: 3 }], "cat", [1], true));
+console.log(filter([{ cat: [1] }, { cat: [3] }], "cat", [1]));
 
 var url = new URL(window.location);
 
 var targetCats = url.searchParams.getAll("tag") || [0]; // Get target languages as array of strings
-console.log(targetCats);
+//console.log(targetCats);
+
+
+async function retrieve(url) {
+	const response = await fetch(url);
+	return await response.json();
+}
+
+
+retrieve("data/categories.json").then((categories) => {
+  for (var i = 0; i < categories.length; i++) {
+    let newTag = document.createElement("span");
+    newTag.innerText = categories[i]["name"];
+    newTag.classList.add("pricetag")
+    document.getElementById("tags-display").append(newTag);
+  }
+});
+
+
+
 
 //    categories = filter(categories, "id", targetCats, true);
 //    display(categories, $("#engine-display"));

@@ -7,20 +7,55 @@ $white: hsl(0, 0%, 100%);
 
 
 body {
-    background-color: $white;
+    background-color: $very-dark-blue-main;
     color: $white;
     font-family: 'Outfit', sans-serif;
+    margin: 0;
 }
+
+// NAV BAR
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    padding: 2rem;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 1.5rem;
+    color: $cyan;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    transition: transform .2s;
+  }
+  
+
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover {
+    background-color: $cyan;
+    color: black;
+    transform: scale(1.2);
+  }
+
 
 h1 {
     text-align: center;
     color: $cyan;
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
 #form__categories {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     .cat-selection {
         margin: 0 auto;
         padding: 0.4rem;
@@ -30,8 +65,15 @@ h1 {
         border-radius: 0.3rem;
     }
     .cat-selection:hover {
-        background-color: $cyan;;
+        background-color: $cyan;
+        input {
+            cursor: pointer;
+        }
+        label {
+            cursor: pointer;
+        }
     }
+
 }
 
 #activities {
@@ -49,7 +91,9 @@ h1 {
     box-shadow: 0px 0px 10px 2px black;
     transition: transform 0.2s;
     img {
+        object-fit: cover;
         width: 100%;
+        height: 200px;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
     }
@@ -58,7 +102,7 @@ h1 {
         h2 {
             margin: 0;
             a {
-                font-size: 3rem;
+                font-size: 2rem;
                 color: $cyan;
                 text-decoration: none;
             }
@@ -70,46 +114,67 @@ h1 {
                 margin: 0 5px 0 10px;
                 display: inline-block;
                 height: 25px;
-                border-radius: 0 5px 5px 0;
-                padding: 0 10px 0 15px;
+                border-radius: 20px 5px 5px 20px;
+                padding: 0  10px 0 0px;
                 background: #e8edf0;
                 border: 1px solid #c7d2d4;
-                color: #999;
+                color: $very-dark-blue-main;
                 line-height: 23px;
+                font-size: 0.8rem;
               }
               .pricetag:before {
-                position: absolute;
-                background: #e8edf0;
+                background: attr(style);
                 content: "\25CF";
-                color: white;
-                text-shadow: 0 0 1px #aaa;
-                font-size: 12px;
-                line-height: 13px;
-                text-indent: 6px;
-                top: 3px;
-                left: -10px;
-                width: 18px;
-                height: 18px;
-                transform: rotate(45deg);
-                border-left: 1px solid #c7d2d4;
-                border-bottom: 1px solid #c7d2d4;
+                color: $very-dark-blue-card;
+                padding-right: 10px;
+                padding-left: 5px;
               }
         }
         p {
-            font-size: 2rem;
+            font-size: 1.2rem;
         }
     }
 }
 
 .activity-card:hover {
-    box-shadow: 0px 0px 10px 2px red;;
+    box-shadow: 0px 0px 10px 2px $cyan;
     transform: scale(1.1);
 }
 
+// Footer
+.footer {
+    left: 10px;
+    bottom: 5px;
+    right: 10px;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){   
+    h1 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 3rem;
+    }
+    #categories-form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #form__categories {
+        display: block;
+        padding: 1rem;
+    }
+
     #activities {
         display: block;
         margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .activity-card {
+        margin-bottom: 2rem;
     }
 }

@@ -1,13 +1,21 @@
 [
     {
-        "id": 1,
+        "name": "Physical",
+        "description": "This is the description",
+        "color": "#0f0"
+    },
+    {
         "name": "Teams of 2",
         "description": "This is the description",
         "color": "#FFF8DE"
     },
     {
-        "id": 2,
         "name": "Teams of 4",
+        "description": "This is the description",
+        "color": "#0f0"
+    },
+    {
+        "name": "Whole Class",
         "description": "This is the description",
         "color": "#0f0"
     }

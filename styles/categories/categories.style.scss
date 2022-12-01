@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+$cyan: hsl(178, 100%, 50%);
+$very-dark-blue-main: hsl(217, 54%, 11%);
+$very-dark-blue-card: hsl(216, 50%, 16%);
+$very-dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+
+body {
+    background-color: $very-dark-blue-main;
+    color: $white;
+    font-family: 'Outfit', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: $cyan;
+}
+
+#form__categories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    .cat-selection {
+        margin: 0 auto;
+        padding: 0.4rem;
+        display: flex;
+        background-color: $very-dark-blue-card;
+        font-size: 1.5rem;
+        border-radius: 0.3rem;
+    }
+    .cat-selection:hover {
+        background-color: $cyan;;
+    }
+}
+
+.activity-card{
+    img {
+        width: 500px;
+    }
+}

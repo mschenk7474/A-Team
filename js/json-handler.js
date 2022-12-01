@@ -1,11 +1,14 @@
-const $=(x)=>{return document.querySelector(x)}
+const $ = (x) => {
+  return document.querySelector(x);
+};
 
 async function retrieve(url) {
-	const response = await fetch(url);
-	return await response.json();
+  const response = await fetch(url);
+  return await response.json();
 }
 
-function filter(data, key, value) { // ol' bessy
+function filter(data, key, value) {
+  // ol' bessy
   if (value == "") {
     // no value specified by user, no filtering to be done
     return data;
@@ -20,31 +23,30 @@ function filter(data, key, value) { // ol' bessy
   return data;
 }
 
-
 function populateCheckbox(data, type, target, label = "element", start = 0) {
-	for (var i = start; i < data.length; i++) {
-		var newElem = document.createElement("input");
-		newElem.type = type;
-		newElem.value = data[i].name;
-		newElem.name = label;
-		newElem.id = label + i;
-		var newLabel = document.createElement("label");
-		newLabel.setAttribute("for", newElem.id);
-		newLabel.innerText = data[i].name;
+  for (var i = start; i < data.length; i++) {
+    var newElem = document.createElement("input");
+    newElem.type = type;
+    newElem.value = data[i].name;
+    newElem.name = label;
+    newElem.id = label + i;
+    var newLabel = document.createElement("label");
+    newLabel.setAttribute("for", newElem.id);
+    newLabel.innerText = data[i].name;
 
-		let checkboxParent = document.createElement("span");
+    let checkboxParent = document.createElement("span");
     checkboxParent.classList.add("cat-selection");
-    checkboxParent.style = "background-color: " + data[i].color;
+    // checkboxParent.style = "background-color: " + data[i].color;
     checkboxParent.append(newElem, newLabel);
     target.append(checkboxParent);
-	}
+  }
 }
 
 function populateResults(values, target) {
   for (let i = 0; i < values.length; i++) {
     let resultCategories = [...categories];
     resultCategories = filter(resultCategories, "name", values[i].categories);
-    
+
     let newCard = document.createElement("div");
     newCard.classList.add("activity-card");
 
@@ -55,7 +57,7 @@ function populateResults(values, target) {
     let newInfo = document.createElement("div");
     newInfo.classList.add("activity-card__info");
 
-    let newTitle = document.createElement('h2');
+    let newTitle = document.createElement("h2");
     let newDlLink = document.createElement("a");
     newDlLink.href = values[i].file;
     newDlLink.target = "_blank";
@@ -65,7 +67,6 @@ function populateResults(values, target) {
     let newCardInfo = document.createElement("div");
     newCardInfo.classList.add("activity-card__info__category");
 
-    
     for (let j = 0; j < resultCategories.length; j++) {
       let newTag = document.createElement("span");
       newTag.classList.add("pricetag");
@@ -95,9 +96,8 @@ retrieve("data/categories.json").then((result) => {
   result.forEach((i) => {
     inputs[i["name"]] = false;
   });
-	populateCheckbox(categories, "checkbox", $("#form__categories"), "category");
+  populateCheckbox(categories, "checkbox", $("#form__categories"), "category");
 });
-
 
 retrieve("data/activities.json").then((result) => {
   populateResults(result, $("#activities"));
@@ -106,10 +106,13 @@ retrieve("data/activities.json").then((result) => {
 
 function hideTagsFrom(target, selected) {
   for (let i = 0; i < target.length; i++) {
-    target[i].DOMref.style.display = selected.some((e) => !target[i].categories.includes(e)) ? "none" : "block";
+    target[i].DOMref.style.display = selected.some(
+      (e) => !target[i].categories.includes(e)
+    )
+      ? "none"
+      : "block";
   }
 }
-
 
 $("#categories-form").oninput = (e) => {
   let selected = e.target.value;
@@ -122,4 +125,4 @@ $("#categories-form").oninput = (e) => {
     }
   }
   hideTagsFrom(games, selectedTags);
-}
+};

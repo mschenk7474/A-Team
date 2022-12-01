@@ -1,5 +1,10 @@
 [
     {
+        "name": "Large Groups",
+        "description": "This is the description",
+        "color": "#f00"
+    },
+    {
         "name": "Physical",
         "description": "This is the description",
         "color": "#0f0"

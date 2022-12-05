@@ -35,6 +35,10 @@ body {
   transform: scale(1.2);
 }
 
+.active {
+  background-color: hsl(216deg, 50%, 16%);
+}
+
 h1 {
   text-align: center;
   color: hsl(178deg, 100%, 50%);

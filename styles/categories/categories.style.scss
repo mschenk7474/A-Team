@@ -43,6 +43,10 @@ body {
     color: black;
     transform: scale(1.2);
   }
+  
+  .active {
+    background-color: $very-dark-blue-card;
+  }
 
 
 h1 {

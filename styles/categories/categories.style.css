@@ -139,7 +139,7 @@ h1 {
   bottom: 5px;
   right: 10px;
   width: 100%;
-  background-color: gray;
+  background-color: inherit;
   color: white;
   text-align: center;
 }

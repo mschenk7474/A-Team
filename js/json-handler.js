@@ -36,7 +36,7 @@ function populateCheckbox(data, type, target, label = "element", start = 0) {
 
     let checkboxParent = document.createElement("span");
     checkboxParent.classList.add("cat-selection");
-    // checkboxParent.style = "background-color: " + data[i].color;
+    checkboxParent.style = "background-color: " + data[i].color;
     checkboxParent.append(newElem, newLabel);
     target.append(checkboxParent);
   }

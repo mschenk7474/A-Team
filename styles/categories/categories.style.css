@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 body {
   background-color: hsl(217deg, 54%, 11%);
-  color: hsl(0deg, 0%, 100%);
+  color: white;
   font-family: "Outfit", sans-serif;
   margin: 0;
 }
@@ -58,6 +58,7 @@ h1 {
   background-color: hsl(216deg, 50%, 16%);
   font-size: 1.5rem;
   border-radius: 0.3rem;
+  color: black;
 }
 #form__categories .cat-selection:hover {
   background-color: hsl(178deg, 100%, 50%);
@@ -84,6 +85,7 @@ h1 {
   border-radius: 1rem;
   box-shadow: 0px 0px 10px 2px black;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 .activity-card img {
   -o-object-fit: cover;

@@ -1,72 +1,86 @@
 [
     {
-        "name": "BANG",
-        "description": "Play the sheriff",
-        "categories": ["Whole Class", "Physical"],
-        "icon": "./icons/Human Knot.webp",
-        "file": "pptx file path"
+        "name": "Bang!",
+        "description": "Play the sheriff!",
+        "categories": ["Large Groups", "Physical", "Whole Class"],
+        "icon": "./icons/bang.jpeg",
+        "file": "./pdfs/Bang.pdf"
     },
     {
         "name": "Blind Artist",
-        "description": "descriptionadfasfaf",
-        "categories": ["Whole Class", "Physical", "Teams of 2"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "description": "Be the Beethoven of drawing!",
+        "categories": ["Physical", "Teams of 2"],
+        "icon": "./icons/blind-artist.jpeg",
+        "file": "./pdfs/Blind Artist.pdf"
+    },
+    {
+        "name": "Egg Drop",
+        "description": "Drop the egg without cracking it!",
+        "categories": ["Extra Materials", "Physical", "Teams of 4"],
+        "icon": "./icons/egg-drop.jpeg",
+        "file": "./pdfs/Egg Drop.pdf"
     },
     {
         "name": "Group Map",
-        "description": "Where you at???",
-        "categories": ["Whole Class", "Physical"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "description": "Where are you from?",
+        "categories": ["Physical", "Whole Class"],
+        "icon": "./icons/World Map Group 4.webp",
+        "file": "./pdfs/Group Map.pdf"
     },
     {
         "name": "Human Knot",
-        "description": "Untangle if you can",
+        "description": "Untangle if you can!",
         "categories": ["Large Groups", "Physical"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "icon": "./icons/Human Knot.webp",
+        "file": "./pdfs/Human Knot.pdf"
+    },
+    {
+        "name": "Jeopardy",
+        "description": "The one and only!",
+        "categories": ["Teams of 4", "Whole Class"],
+        "icon": "./icons/Jeopardy.webp",
+        "file": "./pdfs/Jeopardy.pdf"
+    },
+    {
+        "name": "Newspaper Game",
+        "description": "Build the highest newspaper tower!",
+        "categories": ["Extra Materials", "Large Groups", "Teams of 4"],
+        "icon": "./icons/NewspaperTower.webp",
+        "file": "./pdfs/Newspaper Game.pdf"
     },
     {
         "name": "Scavenger Hunt",
-        "description": "Where you at???",
+        "description": "Hind-and-seek, but with objects!",
         "categories": ["Teams of 2", "Physical"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "icon": "./icons/Scavenger-Hunt-Thumbnail.webp",
+        "file": "./pdfs/Scavenger Hunt.pdf"
     },
     {
         "name": "Stand Up If",
-        "description": "Stand up if the question relates to you",
-        "categories": ["Large Groups", "Whole Class"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "description": "Stand up if the question relates to you!",
+        "categories": ["Whole Class"],
+        "icon": "./icons/stand-up-if.jpeg",
+        "file": "./pdfs/Stand Up If"
     },
     {
         "name": "Story Board",
         "description": "Create a story one sentence at a time!",
         "categories": ["Teams of 4"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "icon": "./icons/Story-Board-Thumbnail(Team 2).webp",
+        "file": "./pdfs/Story Board.pdf"
     },
     {
         "name": "Telepathy",
-        "description": "the descccccc",
+        "description": "Are you a mind-reading wizard?",
         "categories": ["Teams of 2"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "icon": "./icons/Telepathy-Game-Thumbnail.webp",
+        "file": "./pdfs/Telepathy.pdf"
     },
     {
         "name": "Two truths and a lie",
-        "description": "the descccccc",
+        "description": "Fool Your Friends!",
         "categories": ["Teams of 2"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
-    },
-    {
-        "name": "Activity Name",
-        "description": "This is the description",
-        "categories": ["Whole Class"],
-        "icon": "./pics/MicrosoftTeams-image.png",
-        "file": "pptx file path"
+        "icon": "./icons/team5_activitytwothumbnail.webp",
+        "file": "./pdfs/Two Truths and a Lie.pdf"
     }
 ]

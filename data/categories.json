@@ -1,5 +1,10 @@
 [
     {
+        "name": "Extra Materials",
+        "description": "This is the description",
+        "color": "#E5A9BB"
+    },
+    {
         "name": "Large Groups",
         "description": "This is the description",
         "color": "#A9E5BB"
